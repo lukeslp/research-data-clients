@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-data-clients"
+version = "0.1.0"
+description = "Structured API clients for 17 external data sources - academic, government, news, and web APIs"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Luke Steuber", email = "luke@steuber.dev"}
+]
+keywords = [
+    "api",
+    "client",
+    "arxiv",
+    "pubmed",
+    "semantic-scholar",
+    "github",
+    "nasa",
+    "census",
+    "wikipedia",
+    "news",
+    "weather",
+    "research",
+    "data",
+    "wayback",
+    "archive"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+arxiv = ["arxiv>=2.0.0"]
+rss = ["feedparser>=6.0.0"]
+all = [
+    "arxiv>=2.0.0",
+    "feedparser>=6.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "responses>=0.23.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/lukeslp/research-data-clients"
+Repository = "https://github.com/lukeslp/research-data-clients"
+Issues = "https://github.com/lukeslp/research-data-clients/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["research_data_clients*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = false
