@@ -9,7 +9,7 @@ description = "Structured API clients for 17 external data sources - academic, g
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Luke Steuber", email = "luke@steuber.dev"}
+    {name = "Luke Steuber", email = "luke@dr.eamer.dev"}
 ]
 keywords = [
     "api",
