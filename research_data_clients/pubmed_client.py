@@ -22,7 +22,7 @@ PUBMED_FETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 
 # Common headers
 HEADERS = {
-    "User-Agent": "DrEamerAI/1.0 (https://dr.eamer.dev; api@dr.eamer.dev)"
+    "User-Agent": "research-data-clients/0.1.0 (https://github.com/lukeslp/research-data-clients)"
 }
 
 
