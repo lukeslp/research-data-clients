@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "research-data-clients"
 version = "0.1.0"
-description = "Structured API clients for 17 external data sources - academic, government, news, and web APIs"
+description = "Structured API clients for 18 external data sources - academic, government, news, and web APIs"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
